@@ -51,11 +51,15 @@ def down():
     global racket1y
     if racket1y > -400:  # Don't go off bottom
         racket1y -= 20
-
+def screenclicks(x, y):
+    if y > 0:
+        up()
+    elif y < 0:
+        down()
 t.listen()
 t.onkeypress(up, "w")
 t.onkeypress(down, "s")
-
+t.onscreenclick(screenclicks)
 def update_game():
     global bx, by, vx, vy
     
