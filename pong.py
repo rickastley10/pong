@@ -1,5 +1,6 @@
 import turtle as t
 
+t.title("pong")
 t.setup(900, 900)
 t.bgcolor("black")
 t.tracer(0, 0)
@@ -110,3 +111,4 @@ def update_game():
 
 update_game()
 t.mainloop()
+
