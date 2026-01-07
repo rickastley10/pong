@@ -15,13 +15,13 @@ t.hideturtle()
 
 
 # To enable, set it to 1
-cheats = 1
+cheats = 0
 
 # Game variables
 
 speed = 20
 bx, by = 0, 0
-
+score = 0
 vx, vy = speed, speed
 racket1x = -300  # LEFT side of screen
 
@@ -206,7 +206,7 @@ def update_game():
 
         ball_bottom <= racket_top):
 
-        
+        score += 1
 
         # Ball hit racket - bounce back!
 
@@ -225,7 +225,8 @@ def update_game():
     # Draw everything
 
     t.clear()
-    
+    t.goto(0, 0)
+    t.write(score, align="center", font=("Arial", 18, "normal"))
     borders()
 
     draw_racket()
