@@ -219,6 +219,7 @@ def update_game():
         bx = 0
 
         by = 0
+        score = 0
 
         
 
