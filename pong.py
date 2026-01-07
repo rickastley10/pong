@@ -15,7 +15,7 @@ t.hideturtle()
 
 
 # To enable, set it to 1
-cheats = 0
+cheats = 1
 
 # Game variables
 
@@ -41,7 +41,24 @@ t.color("red")
 
 t.fillcolor("red")
 
-
+def borders():
+    t.pencolor("red")
+    t.pensize(3)
+    t.goto(400,400)
+    
+    t.pendown()
+    
+    t.goto(400, -400)
+    
+    t.goto(-400, -400)
+    
+    t.goto(-400, 400)
+    
+    t.goto(400, 400)
+    
+    t.penup()
+    
+    
 
 def draw_ball():
 
@@ -132,6 +149,7 @@ def update_game():
     global bx, by, vx, vy, score
     
     # Update ball
+    
 
     bx += vx
 
@@ -207,6 +225,8 @@ def update_game():
     # Draw everything
 
     t.clear()
+    
+    borders()
 
     draw_racket()
 
