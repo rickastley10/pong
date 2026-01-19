@@ -7,7 +7,7 @@ t.setup(900, 900)
 t.bgcolor("black")
 t.tracer(0, 0)
 t.hideturtle()
-
+t.delay(0)
 
 # To enable, set it to 1
 cheats = 0
@@ -160,3 +160,4 @@ def update_game():
 update_game()
 
 t.mainloop()
+
