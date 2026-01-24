@@ -14,6 +14,7 @@ cheats = 0
 
 # Game variables
 speed = 20
+fps = 30
 bx, by = 0, 0
 score = 0
 vx, vy = speed, speed
@@ -148,7 +149,7 @@ def update_game():
     draw_ball()
     t.update()
     # Next frame
-    t.ontimer(update_game, 30)
+    t.ontimer(update_game, fps)
     #cheats
     if cheats == 1:
     	if ball_bottom > racket_top:
@@ -160,4 +161,5 @@ def update_game():
 update_game()
 
 t.mainloop()
+
 
